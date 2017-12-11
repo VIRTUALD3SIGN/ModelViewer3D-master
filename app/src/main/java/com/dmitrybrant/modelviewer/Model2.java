@@ -57,9 +57,9 @@ public abstract class Model2 {
 
     protected void initModelMatrix2(float boundSize, float rotateX, float rotateY, float rotateZ) {
         Matrix.setIdentityM(modelMatrix2, 0);
-        Matrix.rotateM(modelMatrix2, 0, rotateX, 1.0f, 0.0f, 2.0f);
+        Matrix.rotateM(modelMatrix2, 0, rotateX, 0.0f, 0.0f, 1.0f);
         Matrix.rotateM(modelMatrix2, 0, rotateY, 0.0f, 1.0f, 0.0f);
-        Matrix.rotateM(modelMatrix2, 0, rotateZ, 0.0f, 2.0f, 1.0f);
+        Matrix.rotateM(modelMatrix2, 0, rotateZ, 0.0f, 1.0f, 1.0f);
         scaleModelMatrixToBounds(boundSize);
         Matrix.translateM(modelMatrix2, 0,-centerMassX2,-centerMassY2,-centerMassZ2);
     }
